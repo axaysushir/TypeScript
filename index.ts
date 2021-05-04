@@ -3,10 +3,6 @@ interface User{
     id: number
 }
 
-// const user: User = {
-//     name: 'jack',
-//     id: 1
-// }
 
 class UserAccout {
     name: string
