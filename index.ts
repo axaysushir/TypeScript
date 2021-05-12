@@ -55,3 +55,19 @@ declare const backpack: Backpack<string>
 
 const object = backpack.get()
 backpack.add(23)
+
+// Structural typr system
+interface Point {
+    x: number
+    y: number
+}
+
+function logPoint(p: Point) {
+    console.log(`${p.x}, ${p.y}`);   
+}
+
+const point = {x: 14, y: 25}
+logPoint(point) // logs "14, 25"
+
+const point2 = {x: 12, y: 3, z: 9}
+logPoint(point2) // logs "12, 3"
