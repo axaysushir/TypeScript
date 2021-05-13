@@ -71,3 +71,18 @@ logPoint(point) // logs "14, 25"
 
 const point2 = {x: 12, y: 3, z: 9}
 logPoint(point2) // logs "12, 3"
+
+class VirtualPoint {
+    x: number
+    y: number
+
+    constructor(x: number, y: number) {
+        this.x= x
+        this.y = y
+    }
+}
+const newPoint = new VirtualPoint(12, 45)
+logPoint(newPoint)
+
+// if the object or class has all the required properties, typescript will say they match, regardless of the
+// implementation details
