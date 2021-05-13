@@ -86,3 +86,16 @@ logPoint(newPoint)
 
 // if the object or class has all the required properties, typescript will say they match, regardless of the
 // implementation details
+
+const myuser = {
+    name: 'kayla'
+}
+myuser.name = 'anjali'
+
+const myUnchangedUser = {
+    name: 'sabrina'
+} as const
+
+myUnchangedUser.name = 'Ritika'
+
+const exampleUsers = [{name: 'jhon'}, {name: 'Fesha'}] as const
