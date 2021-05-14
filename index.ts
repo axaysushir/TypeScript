@@ -99,3 +99,26 @@ const myUnchangedUser = {
 myUnchangedUser.name = 'Ritika'
 
 const exampleUsers = [{name: 'jhon'}, {name: 'Fesha'}] as const
+
+// enums in TypeScript
+enum Direction {
+    Up,
+    Down,
+    Left, 
+    Right,
+}
+
+enum ShapeKind {
+    circle, 
+    square
+}
+
+interface Circle {
+    kind: ShapeKind.circle
+    radius: number
+}
+
+let c: Circle = {
+    kind: ShapeKind.circle,
+    radius: 100
+}
