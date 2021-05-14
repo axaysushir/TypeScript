@@ -122,3 +122,34 @@ let c: Circle = {
     kind: ShapeKind.circle,
     radius: 100
 }
+
+enum E {
+    foo,
+    bar
+}
+
+function f(x: E) {
+    if (x !== E.foo || x !== E.bar) {
+        // This condition will always return 'true' since the types 'E.foo' and 'E.bar' have no overlap.
+    }
+}
+
+// enum at compile time
+enum LogLevel {
+    error,
+    warn,
+    info,
+    debug
+}
+
+type LogLevelString =  keyof typeof LogLevel;
+
+function printImportant(key: LogLevelString, message: string) {
+    const num = LogLevel[key]
+    if (num <= LogLevel.warn) {
+        console.log('Log level key is:', key);
+        console.log('Log level value is:', num);
+        console.log('Log level message is:', message);    
+    }
+}
+printImportant("error", 'this is error message')
