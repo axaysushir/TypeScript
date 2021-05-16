@@ -153,3 +153,50 @@ function printImportant(key: LogLevelString, message: string) {
     }
 }
 printImportant("error", 'this is error message')
+
+// utility types
+// Partial<Type>
+// Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
+interface Todo { 
+    title: string
+    description: string;
+}
+
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
+    return {...todo, ...fieldsToUpdate}
+}
+
+const todo1 = {
+    title: 'Create new Project',
+    description: 'Create project Python / Django'
+}
+
+const todo2 = updateTodo(todo1, {
+    description: 'Install dependencies'
+})
+
+console.log(todo2)
+
+// Required<Type>
+
+interface Props {
+    a?: number;
+    b?: string
+}
+const obj: Props = {a: 5}
+const obj2: Required<Props> = {a: 5} // property b is missing here
+
+// Readonly<Type>
+
+// Constructs a type with all properties of Type set to readonly, meaning the properties of the constructed type cannot be reassigned.
+
+interface data {
+    title: string;
+  }
+  
+const readit: Readonly<data> = {
+    title: "Delete inactive users",
+};
+  
+readit.title = "Hello"; // readonly
+
