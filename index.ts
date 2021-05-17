@@ -200,3 +200,18 @@ const readit: Readonly<data> = {
   
 readit.title = "Hello"; // readonly
 
+
+// Object types
+interface PaintOptions {
+    shape: Shape;
+    xPos?: number;
+    yPos?: number;
+  }
+
+function paintShape(opts: paintOperations) {
+
+}
+
+const shape = getShape()
+paintShape({shape})
+paintShape({shape, xPos: 100})
