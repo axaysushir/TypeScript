@@ -215,3 +215,36 @@ function paintShape(opts: paintOperations) {
 const shape = getShape()
 paintShape({shape})
 paintShape({shape, xPos: 100})
+
+// read only peroperty
+interface Sometype {
+    readonly prop: string
+}
+
+function doSomething(obj: SomeType) {
+    // We can read from 'obj.prop'.
+    console.log(`prop has the value '${obj.prop}'.`);
+  
+    // But we can't re-assign it.
+    obj.prop = "hello";
+//   Cannot assign to 'prop' because it is a read-only property.
+}
+
+interface Person {
+    name: string
+    age: number
+}
+interface readonlyperson {
+    readonly name: string
+    readonly age: number
+}
+let writableperson: Person = {
+    name: 'Hello',
+    age: 23
+}
+
+let readonlyperosn: readonlyperson = writableperson
+
+console.log(readonlyperson.age) // 23
+writableperson.age++
+console.log(readonlyperson.age) // 24
