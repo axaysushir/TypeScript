@@ -113,3 +113,29 @@ var todo2 = updateTodo(todo1, {
     description: 'Install dependencies'
 });
 console.log(todo2);
+var obj = { a: 5 };
+var obj2 = { a: 5 }; // property b is missing here
+var readit = {
+    title: "Delete inactive users"
+};
+readit.title = "Hello"; // readonly
+function paintShape(opts) {
+}
+var shape = getShape();
+paintShape({ shape: shape });
+paintShape({ shape: shape, xPos: 100 });
+function doSomething(obj) {
+    // We can read from 'obj.prop'.
+    console.log("prop has the value '" + obj.prop + "'.");
+    // But we can't re-assign it.
+    obj.prop = "hello";
+    //   Cannot assign to 'prop' because it is a read-only property.
+}
+var writableperson = {
+    name: 'Hello',
+    age: 23
+};
+var readonlyperosn = writableperson;
+console.log(readonlyperson.age); // 23
+writableperson.age++;
+console.log(readonlyperson.age); // 24
