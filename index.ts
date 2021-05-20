@@ -248,3 +248,7 @@ let readonlyperosn: readonlyperson = writableperson
 console.log(readonlyperson.age) // 23
 writableperson.age++
 console.log(readonlyperson.age) // 24
+
+export interface StringValidator {
+    isAcceptable(s: string) : boolean;
+}

@@ -27,3 +27,19 @@ function createLabel(name: string): namelabel;
 function createLabel(nameOrid: number | string): idlabel | namelabel {
     throw "unimplemented"
 }
+
+
+// export declarations
+// Any declaration (such as a variable, function, class, type alias, or interface) can be exported by adding the export keyword.
+
+
+
+import {StringValidator} from './index'
+
+export const numberRegExp = /^[0-9]+$/
+
+export class ZipCodeValidator implements StringValidator {
+    isAcceptable(s: string) {
+        return s.length === 5 && numberRegExp.test(s)
+    }
+}
