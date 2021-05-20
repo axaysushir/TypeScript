@@ -43,3 +43,14 @@ export class ZipCodeValidator implements StringValidator {
         return s.length === 5 && numberRegExp.test(s)
     }
 }
+
+// export { ZipCodeValidator };
+export { ZipCodeValidator as mainValidator };
+// re export 
+export class ParseIntBasedZipCodeValidator {
+    isAcceptable(s: string) {
+      return s.length === 5 && parseInt(s).toString() === s;
+    }
+  }
+  // Export original validator but rename it
+// export { ZipCodeValidator as RegExpBasedZipCodeValidator } from "./ZipCodeValidator";
