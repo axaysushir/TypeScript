@@ -54,3 +54,16 @@ export class ParseIntBasedZipCodeValidator {
   }
   // Export original validator but rename it
 // export { ZipCodeValidator as RegExpBasedZipCodeValidator } from "./ZipCodeValidator";
+
+interface User {
+    id: number
+    firstname: string
+    lastname: string
+    role:string
+}
+function updateuser(id: number, update: Partial<User>) {
+    const user = getUser(id)
+    const newUser = {...user, ...update}
+    saveUser(id, newUser)
+}
+
