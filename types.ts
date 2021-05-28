@@ -67,3 +67,8 @@ function updateuser(id: number, update: Partial<User>) {
     saveUser(id, newUser)
 }
 
+function createUuser(id: number, update: Partial<User>) {
+    const user = getUser(id)
+    const newUser = {...user, ...update}
+    saveUser(id, newUser)
+}
