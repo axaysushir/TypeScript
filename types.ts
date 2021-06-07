@@ -12,7 +12,8 @@ type ex1 = Dog extends Animal ? number: string; // number
 
 type ex2 = RegExp extends Animal ? number : string; // string
 
-// Conditional types take a form that looks a little like conditional expressions (condition ? trueExpression : falseExpression) in JavaScript:
+// Conditional types take a form that looks a little like conditional expressions 
+// (condition ? trueExpression : falseExpression) in JavaScript:
 
 // with generics
 interface idlabel {
@@ -30,7 +31,8 @@ function createLabel(nameOrid: number | string): idlabel | namelabel {
 
 
 // export declarations
-// Any declaration (such as a variable, function, class, type alias, or interface) can be exported by adding the export keyword.
+// Any declaration (such as a variable, function, class, type alias, or interface) 
+// can be exported by adding the export keyword.
 
 
 
