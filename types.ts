@@ -69,8 +69,8 @@ interface User {
 //     saveUser(id, newUser)
 // }
 
-// function createUuser(id: number, update: Partial<User>) {
+// function createUuser(id: number, create: Partial<User>) {
 //     const user = getUser(id)
-//     const newUser = {...user, ...update}
+//     const newUser = {...user, ...create}
 //     saveUser(id, newUser)
 // }
