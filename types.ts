@@ -34,8 +34,6 @@ function createLabel(nameOrid: number | string): idlabel | namelabel {
 // Any declaration (such as a variable, function, class, type alias, or interface) 
 // can be exported by adding the export keyword.
 
-
-
 import {StringValidator} from './index'
 
 export const numberRegExp = /^[0-9]+$/
