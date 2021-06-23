@@ -2,6 +2,8 @@ interface User{
     name: string
     id: number
     email: string
+    phone: number
+    address: string
 }
 
 
