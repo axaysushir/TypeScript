@@ -58,7 +58,7 @@ declare const backpack: Backpack<string>
 const object = backpack.get()
 backpack.add(23)
 
-// Structural typr system
+// Structural type system
 interface Point {
     x: number
     y: number
