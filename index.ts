@@ -57,6 +57,8 @@ declare const backpack: Backpack<string>
 
 const object = backpack.get()
 backpack.add(23)
+backpack.add(34)
+backpack.add(35)
 
 // Structural type system
 interface Point {
