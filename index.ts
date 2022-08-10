@@ -114,12 +114,21 @@ enum Direction {
 
 enum ShapeKind {
     circle, 
-    square
+    square,
+    ractangle,
+    oval,
+    hexagon,
+    pantagon
 }
 
 interface Circle {
     kind: ShapeKind.circle
     radius: number
+}
+interface Square {
+    kind: ShapeKind.square
+    width: number
+    height: number
 }
 
 let c: Circle = {
