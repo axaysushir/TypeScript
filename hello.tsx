@@ -3,9 +3,10 @@ import * as React from 'react';
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
+  rank: number
 }
 
-function Hello({ name, enthusiasmLevel = 1 }: Props) {
+function Hello({ name, enthusiasmLevel = 5 }: Props) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
