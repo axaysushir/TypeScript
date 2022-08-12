@@ -3,7 +3,9 @@ import * as React from 'react';
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
-  rank: number
+  rank: number,
+  code: number,
+  color: string
 }
 
 function Hello({ name, enthusiasmLevel = 5 }: Props) {
