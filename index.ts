@@ -123,7 +123,8 @@ enum ShapeKind {
 
 interface Circle {
     kind: ShapeKind.circle
-    radius: number
+    radius: number,
+    color: string
 }
 interface Square {
     kind: ShapeKind.square
