@@ -221,10 +221,11 @@ interface PaintOptions {
     shape: Shape;
     xPos?: number;
     yPos?: number;
+    zPos?: number;
   }
 
 function paintShape(opts: paintOperations) {
-
+    console.log('hello Paint')
 }
 
 const shape = getShape()
@@ -252,10 +253,12 @@ interface Person {
 interface readonlyperson {
     readonly name: string
     readonly age: number
+    readonly id: number
 }
 let writableperson: Person = {
     name: 'Hello',
-    age: 23
+    age: 23,
+    id: 3501
 }
 
 let readonlyperosn: readonlyperson = writableperson
