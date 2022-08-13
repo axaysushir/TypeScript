@@ -145,6 +145,7 @@ enum E {
 function f(x: E) {
     if (x !== E.foo || x !== E.bar) {
         // This condition will always return 'true' since the types 'E.foo' and 'E.bar' have no overlap.
+        console.log('Hello TSX')
     }
 }
 
