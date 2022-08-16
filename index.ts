@@ -254,11 +254,13 @@ interface readonlyperson {
     readonly name: string
     readonly age: number
     readonly id: number
+    readonly add: string
 }
 let writableperson: Person = {
     name: 'Hello',
     age: 23,
-    id: 1009
+    id: 1009,
+    add: 'India'
 }
 
 let readonlyperosn: readonlyperson = writableperson
