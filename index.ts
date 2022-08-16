@@ -258,7 +258,7 @@ interface readonlyperson {
 let writableperson: Person = {
     name: 'Hello',
     age: 23,
-    id: 3501
+    id: 1009
 }
 
 let readonlyperosn: readonlyperson = writableperson
