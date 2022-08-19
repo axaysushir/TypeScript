@@ -65,14 +65,14 @@ interface User {
     lastname: string
     role:string
 }
-// function updateuser(id: number, update: Partial<User>) {
-//     const user = getUser(id)
-//     const newUser = {...user, ...update}
-//     saveUser(id, newUser)
-// }
+function updateuser(id: number, update: Partial<User>) {
+    const user = getUser(id)
+    const newUser = {...user, ...update}
+    saveUser(id, newUser)
+}
 
-// function createUuser(id: number, create: Partial<User>) {
-//     const user = getUser(id)
-//     const newUser = {...user, ...create}
-//     saveUser(id, newUser)
-// }
+function createUuser(id: number, create: Partial<User>) {
+    const user = getUser(id)
+    const newUser = {...user, ...create}
+    saveUser(id, newUser)
+}
