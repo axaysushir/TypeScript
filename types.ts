@@ -4,6 +4,10 @@ interface Animal {
     live() : void;
 }
 
+interface Dead {
+    dead() : void;
+}
+
 interface Dog extends Animal {
     woof(): void;
 }
@@ -36,7 +40,7 @@ function createLabel(nameOrid: number | string): idlabel | namelabel {
 
 import {StringValidator} from './index'
 
-export const numberRegExp = /^[0-9]+$/
+export const numberRegExp = /^[0-9,A-Z,a-z]+$/
 
 export class ZipCodeValidator implements StringValidator {
     isAcceptable(s: string) {
