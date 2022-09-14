@@ -10,6 +10,7 @@ interface Dead {
 
 interface Dog extends Animal {
     woof(): void;
+    hungery(): void;
 }
 
 type ex1 = Dog extends Animal ? number: string; // number
